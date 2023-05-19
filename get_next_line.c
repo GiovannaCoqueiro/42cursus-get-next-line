@@ -6,11 +6,12 @@
 /*   By: gcoqueir <gcoqueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 12:29:39 by gcoqueir          #+#    #+#             */
-/*   Updated: 2023/05/19 14:43:14 by gcoqueir         ###   ########.fr       */
+/*   Updated: 2023/05/19 15:58:59 by gcoqueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <stdio.h>
 
 static char	*ft_get_lines(int fd, char *str);
 static char	*ft_current_line(char *str, char *line);
@@ -72,7 +73,7 @@ static char	*ft_current_line(char *str, char *line)
 	count = -1;
 	while (str[++count] != '\n' && str[count] != '\0')
 		line[count] = str[count];
-	if (str[count] == '\0')
+	if (str[count] == '\n')
 		line[count++] = '\n';
 	line[count] = '\0';
 	return (line);
