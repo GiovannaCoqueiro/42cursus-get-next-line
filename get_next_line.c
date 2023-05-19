@@ -6,7 +6,7 @@
 /*   By: gcoqueir <gcoqueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/12 12:29:39 by gcoqueir          #+#    #+#             */
-/*   Updated: 2023/05/19 12:24:39 by gcoqueir         ###   ########.fr       */
+/*   Updated: 2023/05/19 14:43:14 by gcoqueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ char	*get_next_line(int fd)
 	next_lines = ft_get_lines(fd, next_lines);
 	if (next_lines == NULL)
 		return (NULL);
+	current_line = NULL;
 	current_line = ft_current_line(next_lines, current_line);
 	next_lines = ft_get_rest(next_lines);
 	return (current_line);
@@ -39,7 +40,8 @@ static char	*ft_get_lines(int fd, char *str)
 	temp = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (temp == NULL)
 		return (NULL);
-	while (ft_strchr(str, '\n') == NULL)
+	temp_len = 1;
+	while (ft_strchr(str, '\n') == NULL && temp_len != 0)
 	{
 		temp_len = read(fd, temp, BUFFER_SIZE);
 		if (temp_len < 0)
@@ -59,7 +61,7 @@ static char	*ft_current_line(char *str, char *line)
 	int	count;
 
 	count = 0;
-	while (str[count] != '\n' || str[count] != '\0')
+	while (str[count] != '\n' && str[count] != '\0')
 		count++;
 	if (str[count] == '\n')
 		line = malloc((count + 2) * sizeof(char));
@@ -68,7 +70,7 @@ static char	*ft_current_line(char *str, char *line)
 	if (line == NULL)
 		return (NULL);
 	count = -1;
-	while (str[++count] != '\n' || str[count] != '\0')
+	while (str[++count] != '\n' && str[count] != '\0')
 		line[count] = str[count];
 	if (str[count] == '\0')
 		line[count++] = '\n';
@@ -84,7 +86,7 @@ static char	*ft_get_rest(char *str)
 	size_t	rest_count;
 
 	count = 0;
-	while (str[count] != '\0' || str[count] != '\n')
+	while (str[count] != '\0' && str[count] != '\n')
 		count++;
 	if (str[count] == '\0')
 	{

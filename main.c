@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "get_next_line.h"
 
 #include <stdio.h>
 #include <fcntl.h>
@@ -22,6 +22,9 @@ int	main(int argc, char **argv)
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
 		return (1);
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
+	printf("%s\n", get_next_line(fd));
 	printf("%s\n", get_next_line(fd));
 	close(fd);
 	return (0);
