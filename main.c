@@ -6,7 +6,7 @@
 /*   By: gcoqueir <gcoqueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 15:39:28 by gcoqueir          #+#    #+#             */
-/*   Updated: 2023/05/19 15:59:50 by gcoqueir         ###   ########.fr       */
+/*   Updated: 2023/05/19 18:27:21 by gcoqueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 #include <stdio.h>
 #include <fcntl.h>
-
-char	*get_next_line(int fd);
 
 int	main(int argc, char **argv)
 {
@@ -34,8 +32,6 @@ int	main(int argc, char **argv)
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
 		return (1);
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
 	printf("%s", get_next_line(fd));
 	printf("%s", get_next_line(fd));
 	printf("%s", get_next_line(fd));

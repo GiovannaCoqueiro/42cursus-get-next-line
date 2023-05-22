@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcoqueir <gcoqueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 12:29:39 by gcoqueir          #+#    #+#             */
-/*   Updated: 2023/05/22 07:45:50 by gcoqueir         ###   ########.fr       */
+/*   Created: 2023/05/22 07:46:14 by gcoqueir          #+#    #+#             */
+/*   Updated: 2023/05/22 07:47:22 by gcoqueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*ft_get_lines(int fd, char *str);
 static char	*ft_current_line(char *str, char *line);
@@ -18,17 +18,17 @@ static char	*ft_get_rest(char *str);
 
 char	*get_next_line(int fd)
 {
-	static char	*next_lines;
+	static char	*next_lines[1000];
 	char		*current_line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	next_lines = ft_get_lines(fd, next_lines);
-	if (next_lines == NULL)
+	next_lines[fd] = ft_get_lines(fd, next_lines[fd]);
+	if (next_lines[fd] == NULL)
 		return (NULL);
 	current_line = NULL;
-	current_line = ft_current_line(next_lines, current_line);
-	next_lines = ft_get_rest(next_lines);
+	current_line = ft_current_line(next_lines[fd], current_line);
+	next_lines[fd] = ft_get_rest(next_lines[fd]);
 	return (current_line);
 }
 
