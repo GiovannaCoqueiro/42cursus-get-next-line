@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcoqueir <gcoqueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/12 12:30:11 by gcoqueir          #+#    #+#             */
-/*   Updated: 2023/05/19 14:42:41 by gcoqueir         ###   ########.fr       */
+/*   Created: 2023/05/23 15:44:10 by gcoqueir          #+#    #+#             */
+/*   Updated: 2023/05/23 15:46:08 by gcoqueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1000
+#  define BUFFER_SIZE 42
 # endif
 
 char	*get_next_line(int fd);

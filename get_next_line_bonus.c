@@ -6,7 +6,7 @@
 /*   By: gcoqueir <gcoqueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 07:46:14 by gcoqueir          #+#    #+#             */
-/*   Updated: 2023/05/22 07:47:22 by gcoqueir         ###   ########.fr       */
+/*   Updated: 2023/05/23 15:51:19 by gcoqueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ static char	*ft_current_line(char *str, char *line)
 	int	count;
 
 	count = 0;
+	if (str[count] == '\0')
+		return (NULL);
 	while (str[count] != '\n' && str[count] != '\0')
 		count++;
 	if (str[count] == '\n')
