@@ -6,7 +6,7 @@
 /*   By: gcoqueir <gcoqueir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 07:46:14 by gcoqueir          #+#    #+#             */
-/*   Updated: 2023/05/23 15:51:19 by gcoqueir         ###   ########.fr       */
+/*   Updated: 2023/05/24 10:54:55 by gcoqueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static char	*ft_get_rest(char *str);
 
 char	*get_next_line(int fd)
 {
-	static char	*next_lines[1000];
+	static char	*next_lines[4096];
 	char		*current_line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
