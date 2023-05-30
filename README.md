@@ -55,6 +55,7 @@
     Instructions to use
 </h2>
 Clone this repository in you local computer using a terminal:
+
 - $> git clone https://github.com/GiovannaCoqueiro/42cursus-get-next-line.git [repository_name]
 
 After succefully cloning the project in your local reposiory you compile the mandatory part using:
