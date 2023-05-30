@@ -18,7 +18,7 @@
 	<h2>
 		Final score
 	</h2>
-	<img src="https://github.com/GiovannaCoqueiro/42cursus-get-next-line/assets/115947494/d7867219-e650-49dd-9f4e-07da8b8ffda9" alt=get next line grade/>
+	<img src="https://github.com/GiovannaCoqueiro/42cursus-get-next-line/assets/115947494/54772633-0e45-4d33-9f0f-f7fa5b8c89ce" alt=get next line grade/>
 </div>
 
 ---
@@ -55,14 +55,18 @@
     Instructions to use
 </h2>
 Clone this repository in you local computer using a terminal:
-
-- $> git clone https://github.com/GiovannaCoqueiro/42cursus-get-next-line.git [repository_name]
+<ul>
+	<li>$> git clone https://github.com/GiovannaCoqueiro/42cursus-get-next-line.git [repository_name]</li>
+</ul>
 
 After succefully cloning the project in your local reposiory you compile the mandatory part using:
-- $> -cc -Wall -Wextra -Werror -D BUFFER_SIZE=n <files.c>
-
+<ul>
+	<li>$> -cc -Wall -Wextra -Werror -D BUFFER_SIZE=n <files.c></li>
+</ul>
+		
 And the bonus part using:
-- $> -cc -Wall -Wextra -Werror -D BUFFER_SIZE=n <files_bonus.c>
-
+<ul>
+	<li>$> -cc -Wall -Wextra -Werror -D BUFFER_SIZE=n <files_bonus.c></li>
+</ul>
 Substitute 'n' with the number of bytes read at a time into the buffer for the read function.
 You will also need a <b>main.c</b> file to open a file and a <b>test</b> file to be read.
