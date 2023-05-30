@@ -6,7 +6,7 @@
 	<h2>
 		<i>get next line</i>
 	</h2>
-	<img src= alt=get next line badge/>
+	<img src="https://github.com/GiovannaCoqueiro/42cursus-get-next-line/assets/115947494/20a982a3-4d8e-4c6f-aa9b-4eafa6888bd6" alt=get next line badge/>
 	<p align=center>
     		Inside this repository, you can see all the code that has been created for the libft project, including the mandatory part as well as the bonus part.
 	</p>
@@ -18,7 +18,7 @@
 	<h2>
 		Final score
 	</h2>
-	<img src= alt=get next line grade/>
+	<img src="https://github.com/GiovannaCoqueiro/42cursus-get-next-line/assets/115947494/d7867219-e650-49dd-9f4e-07da8b8ffda9" alt=get next line grade/>
 </div>
 
 ---
