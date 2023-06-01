@@ -60,13 +60,12 @@ Clone this repository in you local computer using a terminal:
 </ul>
 
 After succefully cloning the project in your local reposiory you compile the mandatory part using:
-<ul>
-	<li>$> -cc -Wall -Wextra -Werror -D BUFFER_SIZE=n <<files.c>></li>
-</ul>
+
+- $> -cc -Wall -Wextra -Werror -D BUFFER_SIZE=n <files.c>
 		
 And the bonus part using:
-<ul>
-	<li>$> -cc -Wall -Wextra -Werror -D BUFFER_SIZE=n <<files_bonus.c>></li>
-</ul>
+
+- $> -cc -Wall -Wextra -Werror -D BUFFER_SIZE=n <files_bonus.c>
+		
 Substitute 'n' with the number of bytes read at a time into the buffer for the read function.
 You will also need a <b>main.c</b> file to open a file and a <b>test</b> file to be read.
